@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1c">
+  <title>Animated Login / Sign Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="network" aria-hidden="true"></canvas>
+  <main class="page">
+    <header class="page-heading"><h1>Animated Login/Sign form</h1></header>
+
+    <section class="auth-card" id="loginCard">
+      <div class="login-view" id="loginView">
+        <div class="card-heading">
+          <span class="status-dot"></span>
+          <h2>System Login</h2>
+        </div>
+        <form id="loginForm" novalidate>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" autocomplete="username"
+                 placeholder="Enter email address" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password"
+                 placeholder="Enter password" required>
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="authenticate" id="authenticate" type="submit">
+            <span class="button-text">Authenticate</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="success-view" id="successView" hidden>
+        <div class="success-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"></circle><path d="m16 24 5 5 11-12"></path></svg>
+        </div>
+        <h2>Welcome In</h2>
+        <p>Authentication successful</p>
+        <button class="back-button" id="backButton" type="button">Back to Login</button>
+      </div>
+    </section>
+
+    <p class="demo-hint">SECURE ACCESS PORTAL <span>•</span> INTERACTIVE UI DEMO</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
